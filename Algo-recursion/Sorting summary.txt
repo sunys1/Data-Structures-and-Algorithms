@@ -1,0 +1,3 @@
+Bubble sort: Best O(n), Average O(n^2)
+Selection sort: Always O(n^2)
+Insertion sort: Average and worst O(n^2), best O(n) - best for nearly sorted data or small data set

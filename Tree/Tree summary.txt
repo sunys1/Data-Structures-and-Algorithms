@@ -1,0 +1,21 @@
+Binary Search Tree (BST): 
+Balanced: O(logn) for most operations. 
+Worst case: Unbalanced => O(n)
+No O(1)
+
+Binary Heap: 
+
+Less ordered than BST as there is no meaning/relationship between nodes on the left and right => lookup can be slower than BST = O(n)
+
+Used for priority queue. Insertion/Deletion sometimes bubbles up.
+
+Insert & Delete: 
+New nodes will be added from left to right
+Worst: O(logn) => Insertion/Deletion sometimes bubbles up if the value inserted is not at the same priority order as the current level
+
+Best: O(1)
+
+Can be max heap or min heap (root node with the max value or the min value)
+Nodes on each level always have values > (or < ) nodes on the next level down
+
+Good for comparative operations: fetch all values greater / smaller than certain values. No need to traverse all nodes before or after certain level. 
