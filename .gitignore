@@ -1,2 +1,7 @@
 ### Mac OS ###
 .DS_Store
+
+# IntelliJ IDEA project settings
+.idea/
+*.iml
+out/
