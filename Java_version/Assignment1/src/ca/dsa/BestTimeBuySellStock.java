@@ -1,4 +1,4 @@
-package ca.ds_algo;
+package ca.dsa;
 
 /***
  * https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/

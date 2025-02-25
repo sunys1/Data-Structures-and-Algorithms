@@ -1,4 +1,4 @@
-package ca.ds_algo;
+package ca.dsa;
 
 /***
  * https://leetcode.com/problems/merge-sorted-array/description/
@@ -7,7 +7,7 @@ package ca.ds_algo;
  * Space: O(1)
  *
  * Similar to Q21 Merge Two Sorted Lists. Instead, we merge from the back.
- * P1 and p2 are like the zipper teeth, and p3 is like the slider of a zipper
+ * P1 and p2 are like the zipper teeth, and p3 is like the slider of a zipper.
  */
 public class MergeSortedArray {
     public void merge(int[] nums1, int m, int[] nums2, int n) {

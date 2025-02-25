@@ -1,4 +1,4 @@
-package ca.ds_algo;
+package ca.dsa;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -10,7 +10,7 @@ import java.util.HashMap;
  * Time: O(NlogN)
  * Memory: O(N)
  *
- * I already solved before with the one-pass HashMap-complement method (O(N), O(N)).
+ * I already solved before with one-pass HashMap-complement method (O(N), O(N)).
  * So I'm trying the two-pointer solution this time. Works but less time-efficient due to sorting.
  *
  */

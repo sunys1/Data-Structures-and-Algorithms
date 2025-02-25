@@ -1,4 +1,4 @@
-package ca.ds_algo;
+package ca.dsa;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,8 +11,7 @@ import java.util.List;
  *
  * A bit tricky at first to get over the 'Exceeded Memory Limit' error
  * when I implement the nested for loop directly using the math formula with factorials
- * because it causes overflow. It took me some time
- * to convert the pattern to code.
+ * because it causes overflow. It took me some time to convert the pattern to code.
  */
 
 public class PascalTriangle {

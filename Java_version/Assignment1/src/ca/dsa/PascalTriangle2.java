@@ -1,4 +1,4 @@
-package ca.ds_algo;
+package ca.dsa;
 
 import java.util.ArrayList;
 import java.util.List;
