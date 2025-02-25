@@ -10,18 +10,16 @@ import java.util.List;
  * Space: O(N^2)
  *
  * A bit tricky at first to get over the 'Exceeded Memory Limit' error
- * when I implement the nested for loop directly without preprocess things
- * like the firstRow, and using the helper function. And it took me some time
+ * when I implement the nested for loop directly using the math formula with factorials
+ * because it causes overflow. It took me some time
  * to convert the pattern to code.
  */
 
 public class PascalTriangle {
     public List<List<Integer>> generate(int numRows) {
         List<List<Integer>> result = new ArrayList<>();
-
-        // Constraints says numRows >= 1, so we can add the first row directly
         List<Integer> firstRow = new ArrayList<>();
-        firstRow.add(1);
+        firstRow.add(1); // Always 1 in first row
         result.add(firstRow);
 
         List<Integer> newRow = new ArrayList<>();
@@ -40,6 +38,7 @@ public class PascalTriangle {
         List<Integer> row = new ArrayList<>();
         row.add(1); // Always 1 for column 1
         for(int j = 0; j < rowAbove.size() - 1; j++){
+            // Constraints says numRows <= 30, which is ok for int type to handle.
             row.add(rowAbove.get(j) + rowAbove.get(j + 1));
         }
         row.add(1); // Always 1 for last element of the row
