@@ -16,29 +16,31 @@ import java.util.List;
  */
 
 public class PascalTriangle {
+    // Constraints say numRows <= 30, which could cause overflow.
+    public long value = 1L;
     public List<List<Integer>> generate(int numRows) {
         List<List<Integer>> result = new ArrayList<>();
         List<Integer> firstRow = new ArrayList<>();
-        firstRow.add(1); // Always 1 in first row
+
+        firstRow.add((int) value); // Always 1 in first row
         result.add(firstRow);
 
         List<Integer> newRow = new ArrayList<>();
         List<Integer> rowAbove = firstRow;
-        // Starting row2, we can build rows
+        // Starting row 2, we can build rows
         for (int i = 1; i < numRows; i++){
             newRow = buildRow(rowAbove);
             result.add(newRow);
             rowAbove = newRow;
         }
-
         return result;
     }
 
     public List<Integer> buildRow(List<Integer> rowAbove){
         List<Integer> row = new ArrayList<>();
-        row.add(1); // Always 1 for column 1
+        row.add((int) value); // Always 1 for column 1
+
         for(int j = 0; j < rowAbove.size() - 1; j++){
-            // Constraints says numRows <= 30, which is ok for int type to handle.
             row.add(rowAbove.get(j) + rowAbove.get(j + 1));
         }
         row.add(1); // Always 1 for last element of the row
