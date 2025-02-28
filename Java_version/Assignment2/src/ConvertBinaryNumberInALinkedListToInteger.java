@@ -9,8 +9,8 @@
  */
 
 public class ConvertBinaryNumberInALinkedListToInteger {
-    public int degree = 0;
-    public int decimal = 0;
+    private int degree = 0;
+    private int decimal = 0;
     public int getDecimalValue(ListNode head) {
         // we know that the list is not empty. 0*2^0 = 0, 1*2^0 = 1;
         if(head.next == null){return head.val;}
