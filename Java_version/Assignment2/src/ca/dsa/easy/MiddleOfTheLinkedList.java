@@ -1,4 +1,4 @@
-package ca.dsa;
+package ca.dsa.easy;
 
 /***
  * 876. https://leetcode.com/problems/middle-of-the-linked-list/description/

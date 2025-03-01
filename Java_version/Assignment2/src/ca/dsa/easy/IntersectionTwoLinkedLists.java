@@ -1,4 +1,4 @@
-package ca.dsa;
+package ca.dsa.easy;
 
 /***
  * 160. https://leetcode.com/problems/intersection-of-two-linked-lists/description/

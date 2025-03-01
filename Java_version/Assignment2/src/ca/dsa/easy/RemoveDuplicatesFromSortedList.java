@@ -1,4 +1,4 @@
-package ca.dsa;
+package ca.dsa.easy;
 
 /***
  * 83. https://leetcode.com/problems/remove-duplicates-from-sorted-list/

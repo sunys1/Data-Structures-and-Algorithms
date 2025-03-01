@@ -1,4 +1,4 @@
-package ca.dsa;
+package ca.dsa.easy;
 
 /***
  * 234. https://leetcode.com/problems/palindrome-linked-list/description/

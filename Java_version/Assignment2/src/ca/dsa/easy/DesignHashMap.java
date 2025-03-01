@@ -1,4 +1,4 @@
-package ca.dsa;
+package ca.dsa.easy;
 import java.util.LinkedList;
 
 /***

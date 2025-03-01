@@ -1,4 +1,4 @@
-package ca.dsa;
+package ca.dsa.easy;
 
 /***
  * 141. Linked List Cycle
