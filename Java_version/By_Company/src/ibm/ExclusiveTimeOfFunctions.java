@@ -140,3 +140,46 @@ class Solution {
         return Integer.parseInt(timestampString);
     }
 }
+
+/***
+ * Grok3 Solution:
+ */
+
+import java.util.*;
+
+class Solution {
+    public int[] exclusiveTime(int n, List<String> logs) {
+        Stack<int[]> stack = new Stack<>();  // Stack to track active functions [function_id, start_time]
+        int[] result = new int[n];  // Array to store exclusive time for each function
+        int prevTime = 0;  // Track the previous timestamp
+
+        for (String log : logs) {
+            // Parse the log: function_id:operation:timestamp
+            String[] parts = log.split(":");
+            int functionId = Integer.parseInt(parts[0]);
+            String operation = parts[1];
+            int timestamp = Integer.parseInt(parts[2]);
+
+            if (operation.equals("start")) {
+                // If there's a function already running, update its time
+                if (!stack.isEmpty()) {
+                    int[] prevFunction = stack.peek();
+                    result[prevFunction[0]] += timestamp - prevTime;
+                }
+                stack.push(new int[]{functionId, timestamp});
+                prevTime = timestamp;
+            } else {  // operation.equals("end")
+                // Pop the function that just ended
+                int[] currentFunction = stack.pop();
+                int functionIdEnded = currentFunction[0];
+                int startTime = currentFunction[1];
+                // Add the time spent in this function (exclusive), inclusive of start and end timestamps
+                result[functionIdEnded] += timestamp - startTime + 1;
+                // Update prevTime for the next function (if any)
+                prevTime = timestamp + 1;
+            }
+        }
+
+        return result;
+    }
+}
