@@ -3,14 +3,13 @@ package ca.dsa.easy;
 /***
  * 234. https://leetcode.com/problems/palindrome-linked-list/description/
  *
- * Time: O(N)
- * Space: O(1)
- *
  * The first idea is to reverse the linked list and compare the reversed list with the original list.
  * This solution is not efficient because it requires extra space.
  * The second idea is to the idea from Q876: use slow-fast pointer approach to find the middle of the list.
  * Then, we can reverse the second half of the list and compare it with the first half.
  *
+ * Time: O(N)
+ * Space: O(1)
  */
 
 public class PalindromeLinkedList {
@@ -36,7 +35,7 @@ public class PalindromeLinkedList {
         return true;
     }
 
-    public ListNode reverse(ListNode head){
+    private ListNode reverse(ListNode head){
         ListNode prev = null, cur = head;
         while(cur != null){
             // track next

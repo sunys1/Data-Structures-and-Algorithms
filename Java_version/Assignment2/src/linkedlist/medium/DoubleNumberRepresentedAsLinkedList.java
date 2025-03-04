@@ -1,34 +1,34 @@
 /***
  * 2816. https://leetcode.com/problems/double-a-number-represented-as-a-linked-list/description/
  *
- * Following the intuitive approach of calculating the carry and the value of each node,
- * we can use a recursive approach to solve this problem.
+ * Following the intuitive approach of calculating the carry and the value
+ * of each node, we can use a recursive approach to solve this problem.
  *
  * Time: O(N)
  * Space: O(N)
  */
+class Solution {
+    public ListNode doubleIt(ListNode head) {
+        if (helper(head) == 1) {
+            head = new ListNode(1, head);
+        }
 
-public ListNode doubleIt(ListNode head) {
-    if(helper(head) == 1){
-        head = new ListNode(1, head);
+        return head;
     }
 
-    return head;
-}
+    private int helper(ListNode head) {
+        // Recursion base case
+        if (head == null) {
+            return 0;
+        }
 
-public int helper(ListNode head){
-    // Recursion base case
-    if (head == null){
-        return 0;
+        int doubledVal = 2 * head.val + helper(head.next);
+        int carry = doubledVal >= 10 ? 1 : 0;
+        head.val = doubledVal % 10;
+
+        return carry;
     }
-
-    int doubledVal = 2 * head.val + helper(head.next);
-    int carry = doubledVal >= 10 ? 1 : 0;
-    head.val = doubledVal % 10;
-
-    return carry;
 }
-
 /***
  * Faster solution
  *

@@ -1,5 +1,3 @@
-package ca.dsa.easy;
-
 /***
  * 3217. https://leetcode.com/problems/delete-nodes-from-linked-list-present-in-array/description/
  *

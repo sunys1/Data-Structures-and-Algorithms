@@ -5,10 +5,13 @@ package ca.dsa.easy;
  *
  * Use a slow and fast pointer to find the cycle.
  * Since fast moves twice the speed of slow, if there is a cycle, they will meet.
+ *
+ * Time: O(N)
+ * Space: O(1)
  */
 public class LinkedListCycle {
     public boolean hasCycle(ListNode head) {
-        if(head == null || head.next == null){return false;};
+        if(head == null || head.next == null){return false;}
 
         ListNode slow = head, fast = head;
 

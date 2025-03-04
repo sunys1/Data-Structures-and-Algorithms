@@ -5,6 +5,9 @@ package ca.dsa.easy;
  *
  * Given the list is sorted in ascending order, we can use the same idea as in removing
  * duplicates from sorted array: use 2 pointer slow, fast: fast moves 1 step ahead of slow
+ *
+ * Time: O(N)
+ * Space: O(1)
  */
 public class RemoveDuplicatesFromSortedList {
     public ListNode deleteDuplicates(ListNode head) {
