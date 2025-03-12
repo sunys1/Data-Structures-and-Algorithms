@@ -47,7 +47,6 @@ public ListNode reverseEvenLengthGroups(ListNode head) {
             }
 
             // Connect with previous group
-            ListNode nextGroupStart = groupStart.next;
             prevGroupEnd.next = prev;
             groupStart.next = cur;
             prevGroupEnd = groupStart;
